@@ -1,0 +1,126 @@
+{
+  "info": {
+    "_postman_id": "4a05bebc-bb19-4102-8a3f-04a2d7d69fcc",
+    "name": "user",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3236061"
+  },
+  "item": [
+    {
+      "name": "/user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"uzair@gmail.com\",\n    \"name\": \"uzair\",\n    \"password\": \"1234\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{api_url}}/user",
+          "host": ["{{api_url}}"],
+          "path": ["user"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/user/:id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"uzair@gmail.com\",\n    \"name\": \"uzair\",\n    \"password\": \"1234\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{api_url}}/user/6658e4da4450551085652a4b",
+          "host": ["{{api_url}}"],
+          "path": ["user", "6658e4da4450551085652a4b"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"example@example.com\",\n    \"password\": \"1234@Abc\",\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{api_url}}/auth/login",
+          "host": ["{{api_url}}"],
+          "path": ["auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/auth/signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"example@example.com\",\n    \"password\": \"1234@Abc\",\n    \"name\": \"example\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{api_url}}/auth/signup",
+          "host": ["{{api_url}}"],
+          "path": ["auth", "signup"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "api_url",
+      "value": "localhost:4000",
+      "type": "string"
+    }
+  ]
+}
